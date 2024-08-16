@@ -141,7 +141,7 @@ export default function Home() {
                </motion.div>
             </div>
          </section>
-         <div className="min-h-[50vh]">
+         <div className="min-h-[40vh] md:min-h-[50vh]">
             {isClient && (
                <motion.section
                   initial={{
@@ -168,6 +168,81 @@ export default function Home() {
                </motion.section>
             )}
          </div>
+         <section className=" pt-6 pb-16 md:pt-12 md:pb-24">
+            <h2 className="container font-semibold text-4xl md:text-5xl">
+               Робимо усе:
+            </h2>
+            <div className="mt-9 border-border/50 border-y">
+               <ol className="container flex justify-center divide-border/50 max-md:flex-col md:divide-x max-md:divide-y md:px-0">
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">01.</span> Волосся{" "}
+                     <span className="text-3xl">💇‍♀️</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">02.</span> Брови{" "}
+                     <span className="text-3xl">🖌️</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">03.</span> Нігті{" "}
+                     <span className="text-3xl">💅🏻</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">04.</span> Обличчя{" "}
+                     <span className="text-3xl">😊</span>{" "}
+                  </li>
+               </ol>
+            </div>
+            <p className="mt-10 flex items-center justify-center gap-1 text-center font-medium text-lg">
+               Приклади робіт знизу
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width={24}
+                  height={24}
+                  fill={"transparent"}
+               >
+                  <path
+                     d="M12 20L12 4"
+                     stroke="currentColor"
+                     strokeWidth="1.5"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                  />
+                  <path
+                     d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 6.99997 15 6.99997 15"
+                     stroke="currentColor"
+                     strokeWidth="1.5"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                  />
+               </svg>
+            </p>
+         </section>
+         <section className=" pt-6 pb-16 md:pt-12 md:pb-24">
+            <h2 className="container font-semibold text-4xl md:text-5xl">
+               Галерея робіт
+            </h2>
+            <div className="mt-9 border-border/50 border-y">
+               <ol className="container flex justify-center divide-border/50 max-md:flex-col md:divide-x max-md:divide-y md:px-0">
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">01.</span> Волосся{" "}
+                     <span className="text-3xl">💇‍♀️</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">02.</span> Брови{" "}
+                     <span className="text-3xl">🖌️</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">03.</span> Нігті{" "}
+                     <span className="text-3xl">💅🏻</span>{" "}
+                  </li>
+                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
+                     <span className="mr-2 inline-block">04.</span> Обличчя{" "}
+                     <span className="text-3xl">😊</span>{" "}
+                  </li>
+               </ol>
+            </div>
+         </section>
          <section
             id="where"
             className="container pt-6 pb-16 md:pt-12 md:pb-24"
@@ -176,7 +251,7 @@ export default function Home() {
                {" "}
                Місце знаходження
             </h2>
-            <div className="mt-8 flex justify-between gap-6 rounded-2xl border border-border/70 bg-white p-7 shadow-sm max-md:flex-col md:py-14">
+            <div className="mt-9 flex justify-between gap-6 rounded-2xl border border-border/70 bg-white p-7 shadow-sm max-md:flex-col md:py-14">
                <p className="text-lg">
                   <span className="mb-4 block font-semibold text-3xl md:text-4xl">
                      Місто Нетішин,
@@ -228,7 +303,7 @@ export default function Home() {
                </div>
             </div>
             <svg
-               className="mx-auto my-6 w-full max-w-[300px] md:my-10"
+               className="mx-auto my-6 w-full max-w-[300px] opacity-70 md:my-10"
                width="507"
                height="37"
                viewBox="0 0 507 37"
