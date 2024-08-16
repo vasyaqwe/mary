@@ -34,9 +34,10 @@ export function Header() {
                   height={300}
                />
             </Link>
-            <nav className="w-full">
-               <ul className="flex w-full items-center">
-                  <li className="ml-auto">
+            <nav className="ml-auto">
+               <ul className="flex w-full items-center gap-4">
+                  {/* <li className="font-medium opacity-80">🟢 Працюємо зараз</li> */}
+                  <li>
                      <a
                         href="#where"
                         className={cn(

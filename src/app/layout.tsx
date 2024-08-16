@@ -45,10 +45,10 @@ export default function RootLayout({
                         />
                      </Link>
                      <div>
-                        <p className="mb-4 opacity-80">
+                        <p className="mb-4 opacity-75">
                            м.Нетішин, проспект Героїв України 6✨
                         </p>
-                        <p className="opacity-80">
+                        <p className="opacity-75">
                            Послуги за попереднім записом 🦋
                         </p>
                      </div>
@@ -58,7 +58,7 @@ export default function RootLayout({
                         href="https://www.instagram.com/beautystudi0_mary/"
                         target="_blank"
                         rel="noreferrer"
-                        className="-mt-1 mb-4 flex w-fit items-center gap-2 rounded-lg bg-border px-2 py-1.5 font-bold text-[1.2rem] text-foreground transition-all active:scale-95 active:bg-border hover:bg-border/90"
+                        className="-mt-1 mb-4 flex w-fit items-center gap-2 rounded-lg bg-border px-2 py-1.5 font-semibold text-[1.2rem] text-foreground transition-all active:scale-95 active:bg-border hover:bg-border/90"
                      >
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function RootLayout({
                            />
                         </svg>
                      </a>
-                     <p className="opacity-80 max-lg:text-sm">
+                     <p className="opacity-75 max-lg:text-sm">
                         © {new Date().getFullYear()} Beauty Studio Mary. Всі
                         права захищені.
                      </p>
