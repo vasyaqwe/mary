@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Manrope } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
@@ -58,7 +59,10 @@ export default function RootLayout({
                         href="https://www.instagram.com/beautystudi0_mary/"
                         target="_blank"
                         rel="noreferrer"
-                        className="-mt-1 mb-4 flex w-fit items-center gap-2 rounded-lg bg-border px-2 py-1.5 font-semibold text-[1.2rem] text-foreground transition-all active:scale-95 active:bg-border hover:bg-border/90"
+                        className={cn(
+                           buttonVariants({ variant: "secondary" }),
+                           "-mt-1 mb-4 w-fit text-lg",
+                        )}
                      >
                         <svg
                            xmlns="http://www.w3.org/2000/svg"

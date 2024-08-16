@@ -168,7 +168,7 @@ export default function Home() {
                </motion.section>
             )}
          </div>
-         <section className=" pt-6 pb-16 md:pt-12 md:pb-24">
+         <section className=" pt-12 pb-16 md:pt-24 md:pb-24">
             <h2 className="container font-semibold text-4xl md:text-5xl">
                Робимо усе:
             </h2>
@@ -192,7 +192,7 @@ export default function Home() {
                   </li>
                </ol>
             </div>
-            <p className="mt-10 flex items-center justify-center gap-1 text-center font-medium text-lg">
+            <p className="mt-10 flex items-center justify-center gap-1 text-center font-medium text-lg opacity-75">
                Приклади робіт знизу
                <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -222,30 +222,185 @@ export default function Home() {
             <h2 className="container font-semibold text-4xl md:text-5xl">
                Галерея робіт
             </h2>
-            <div className="mt-9 border-border/50 border-y">
-               <ol className="container flex justify-center divide-border/50 max-md:flex-col md:divide-x max-md:divide-y md:px-0">
-                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
-                     <span className="mr-2 inline-block">01.</span> Волосся{" "}
-                     <span className="text-3xl">💇‍♀️</span>{" "}
-                  </li>
-                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
-                     <span className="mr-2 inline-block">02.</span> Брови{" "}
-                     <span className="text-3xl">🖌️</span>{" "}
-                  </li>
-                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
-                     <span className="mr-2 inline-block">03.</span> Нігті{" "}
-                     <span className="text-3xl">💅🏻</span>{" "}
-                  </li>
-                  <li className="px-10 py-8 font-semibold text-xl md:px-20 md:py-20">
-                     <span className="mr-2 inline-block">04.</span> Обличчя{" "}
-                     <span className="text-3xl">😊</span>{" "}
-                  </li>
-               </ol>
+            <div className="mt-9">
+               <div className="container">
+                  <div className="group grid items-center gap-10 py-10 md:grid-cols-2 md:py-14">
+                     <div className="flex h-full flex-col items-start">
+                        <h3 className="mt-auto font-semibold text-3xl md:text-4xl">
+                           <span className="-ml-2 mb-4 block text-5xl">
+                              {" "}
+                              💇‍♀️
+                           </span>
+                           Чоловіча зачіска.
+                        </h3>
+                        <p className="my-5 text-xl opacity-75">
+                           Також робимо Lorem ipsum dolor sit amet.
+                        </p>
+                        <a
+                           href="https://www.instagram.com/p/C-rryqhscLJ/"
+                           target="_blank"
+                           rel="noreferrer"
+                           className={cn(
+                              buttonVariants({
+                                 size: "lg",
+                                 variant: "secondary",
+                              }),
+                              "active:!scale-95 mt-auto group-hover:scale-100 md:scale-95 group-hover:opacity-100 md:opacity-0",
+                           )}
+                        >
+                           Інстаграм пост
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width={24}
+                              height={24}
+                              fill={"transparent"}
+                              className="-ml-1"
+                           >
+                              <path
+                                 d="M16.5 7.5L6 18"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                              />
+                              <path
+                                 d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                              />
+                           </svg>
+                        </a>
+                     </div>
+                     <Image
+                        src={"/1.jpg"}
+                        alt="Чоловіча зачіска"
+                        width={500}
+                        height={400}
+                        className="rounded-2xl md:justify-self-end"
+                     />
+                  </div>
+                  <div className="group grid items-center gap-10 py-10 md:grid-cols-2 md:py-14">
+                     <div className="flex h-full flex-col items-start">
+                        <h3 className="mt-auto font-semibold text-3xl md:text-4xl">
+                           <span className="-ml-2 mb-4 block text-5xl">
+                              {" "}
+                              💇‍♀️
+                           </span>
+                           Чоловіча зачіска.
+                        </h3>
+                        <p className="my-5 text-xl opacity-75">
+                           Також робимо Lorem ipsum dolor sit amet.
+                        </p>
+                        <a
+                           href="https://www.instagram.com/p/C-rryqhscLJ/"
+                           target="_blank"
+                           rel="noreferrer"
+                           className={cn(
+                              buttonVariants({
+                                 size: "lg",
+                                 variant: "secondary",
+                              }),
+                              "active:!scale-95 mt-auto group-hover:scale-100 md:scale-95 group-hover:opacity-100 md:opacity-0",
+                           )}
+                        >
+                           Інстаграм пост
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width={24}
+                              height={24}
+                              fill={"transparent"}
+                              className="-ml-1"
+                           >
+                              <path
+                                 d="M16.5 7.5L6 18"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                              />
+                              <path
+                                 d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                              />
+                           </svg>
+                        </a>
+                     </div>
+                     <Image
+                        src={"/1.jpg"}
+                        alt="Чоловіча зачіска"
+                        width={500}
+                        height={400}
+                        className="rounded-2xl md:justify-self-end"
+                     />
+                  </div>
+                  <div className="group grid items-center gap-10 py-10 md:grid-cols-2 md:py-14">
+                     <div className="flex h-full flex-col items-start">
+                        <h3 className="mt-auto font-semibold text-3xl md:text-4xl">
+                           <span className="-ml-2 mb-4 block text-5xl">
+                              {" "}
+                              💇‍♀️
+                           </span>
+                           Чоловіча зачіска.
+                        </h3>
+                        <p className="my-5 text-xl opacity-75">
+                           Також робимо Lorem ipsum dolor sit amet.
+                        </p>
+                        <a
+                           href="https://www.instagram.com/p/C-rryqhscLJ/"
+                           target="_blank"
+                           rel="noreferrer"
+                           className={cn(
+                              buttonVariants({
+                                 size: "lg",
+                                 variant: "secondary",
+                              }),
+                              "active:!scale-95 mt-auto group-hover:scale-100 md:scale-95 group-hover:opacity-100 md:opacity-0",
+                           )}
+                        >
+                           Інстаграм пост
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width={24}
+                              height={24}
+                              fill={"transparent"}
+                              className="-ml-1"
+                           >
+                              <path
+                                 d="M16.5 7.5L6 18"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                              />
+                              <path
+                                 d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                                 stroke="currentColor"
+                                 strokeWidth="1.5"
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                              />
+                           </svg>
+                        </a>
+                     </div>
+                     <Image
+                        src={"/1.jpg"}
+                        alt="Чоловіча зачіска"
+                        width={500}
+                        height={400}
+                        className="rounded-2xl md:justify-self-end"
+                     />
+                  </div>
+               </div>
             </div>
          </section>
          <section
             id="where"
-            className="container pt-6 pb-16 md:pt-12 md:pb-24"
+            className="container pb-16 md:pt-12 md:pb-24"
          >
             <h2 className="font-semibold text-4xl md:text-5xl">
                {" "}

@@ -41,7 +41,8 @@ export function Header() {
                      <a
                         href="#where"
                         className={cn(
-                           buttonVariants({ size: "sm", variant: "secondary" }),
+                           buttonVariants({ size: "sm", variant: "outline" }),
+                           "px-5",
                         )}
                      >
                         <svg
