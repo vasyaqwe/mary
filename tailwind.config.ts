@@ -12,15 +12,15 @@ const config: Config = {
          screens: {
             sm: "100%",
             md: "100%",
-            lg: "594px",
-            xl: "594px",
-            "2xl": "594px",
+            lg: "1018px",
+            xl: "1018px",
+            "2xl": "1018px",
          },
       },
       extend: {
          fontSize: {
             xs: "0.85rem",
-            sm: "0.9rem",
+            sm: "0.925rem",
          },
          colors: {
             border: "hsl(var(--border))",
@@ -37,12 +37,6 @@ const config: Config = {
                DEFAULT: "hsl(var(--accent))",
                foreground: "hsl(var(--accent-foreground))",
             },
-         },
-         borderRadius: {
-            xl: `calc(var(--radius) + 4px)`,
-            lg: `var(--radius)`,
-            md: `calc(var(--radius) - 6px)`,
-            sm: "calc(var(--radius) - 8px)",
          },
          fontFamily: {
             primary: "var(--font-primary)",

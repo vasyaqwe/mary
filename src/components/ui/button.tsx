@@ -4,20 +4,20 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-   `inline-flex items-center justify-center whitespace-nowrap rounded-md
+   `inline-flex items-center justify-center whitespace-nowrap rounded-xl font-medium
    ring-offset-background focus-visible:outline-none gap-1.5 
    focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 
-   disabled:pointer-events-none disabled:opacity-80 border shadow-sm transition-all button hover:opacity-90`,
+   disabled:pointer-events-none disabled:opacity-80 border shadow-sm transition-all`,
    {
       variants: {
          variant: {
-            default: `bg-gradient-to-tr from-primary/85 font-medium to-primary/70 text-background border-primary`,
+            default: `bg-primary/90 hover:bg-primary text-background border-primary`,
             outline: `bg-background hover:border-border border-border/70 backdrop-blur-md hover:bg-border/10 `,
          },
          size: {
-            default: "h-10 px-3",
-            sm: "h-9 px-2",
-            lg: "h-10 gap-2 px-4",
+            default: "h-11 px-4",
+            sm: "h-10 px-3 text-sm",
+            lg: "h-12 gap-2 rounded-2xl px-4 px-6",
             icon: "size-8 gap-0",
          },
       },

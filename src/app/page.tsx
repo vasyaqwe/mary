@@ -1,115 +1,85 @@
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import about from "@@/public/about.jpg"
 import Image from "next/image"
 
 export default function Home() {
    return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-            <p className="fixed top-0 left-0 flex w-full justify-center border-gray-300 border-b bg-gradient-to-b from-zinc-200 pt-8 pb-6 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border dark:border-neutral-800 dark:bg-zinc-800/30 lg:bg-gray-200 lg:dark:bg-zinc-800/30 dark:from-inherit lg:p-4">
-               Get started by editing&nbsp;
-               <code className="font-bold font-mono">src/app/page.tsx</code>
-            </p>
-            <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white lg:static lg:size-auto lg:bg-none dark:from-black dark:via-black">
-               <a
-                  className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                  href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-               >
-                  By{" "}
+      <>
+         <section className="grid place-items-center pt-28 pb-20 md:pt-48 md:pb-40">
+            <div className="flex flex-col items-center gap-6 px-5 text-center">
+               <h1 className="font-bold text-4xl leading-normal md:text-[3.5rem]">
+                  Салон краси Mary - найкращий <br /> з усіх у Нетішині.
                   <Image
-                     src="/vercel.svg"
-                     alt="Vercel Logo"
-                     className="dark:invert"
-                     width={100}
-                     height={24}
-                     priority
+                     alt=""
+                     src={"/netishyn.jpg"}
+                     width={200}
+                     height={150}
+                     className="-mt-4 ml-5 inline-block h-[70px] max-w-[150px] rounded-xl object-cover ring-4 ring-muted transition-all duration-100 max-md:hidden hover:ring-2"
                   />
+               </h1>
+               <p className="mx-auto max-w-[50ch]">
+                  Ми піклуємось про кожну маленьку деталь вашого вигляду, поки
+                  ви сидите у комфорті.{" "}
+               </p>
+               <a
+                  href="tel:+38050555555"
+                  className={cn("mt-3", buttonVariants({ size: "lg" }))}
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     width={24}
+                     height={24}
+                  >
+                     <path
+                        d="M9.1585 5.71223L8.75584 4.80625C8.49256 4.21388 8.36092 3.91768 8.16405 3.69101C7.91732 3.40694 7.59571 3.19794 7.23592 3.08785C6.94883 3 6.6247 3 5.97645 3C5.02815 3 4.554 3 4.15597 3.18229C3.68711 3.39702 3.26368 3.86328 3.09497 4.3506C2.95175 4.76429 2.99278 5.18943 3.07482 6.0397C3.94815 15.0902 8.91006 20.0521 17.9605 20.9254C18.8108 21.0075 19.236 21.0485 19.6496 20.9053C20.137 20.7366 20.6032 20.3131 20.818 19.8443C21.0002 19.4462 21.0002 18.9721 21.0002 18.0238C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8362C20.0826 15.6393 19.7864 15.5077 19.194 15.2444L18.288 14.8417C17.6465 14.5566 17.3257 14.4141 16.9998 14.3831C16.6878 14.3534 16.3733 14.3972 16.0813 14.5109C15.7762 14.6297 15.5066 14.8544 14.9672 15.3038C14.4304 15.7512 14.162 15.9749 13.834 16.0947C13.5432 16.2009 13.1588 16.2403 12.8526 16.1951C12.5071 16.1442 12.2426 16.0029 11.7135 15.7201C10.0675 14.8405 9.15977 13.9328 8.28011 12.2867C7.99738 11.7577 7.85602 11.4931 7.80511 11.1477C7.75998 10.8414 7.79932 10.457 7.90554 10.1663C8.02536 9.83828 8.24905 9.56986 8.69643 9.033C9.14586 8.49368 9.37058 8.22402 9.48939 7.91891C9.60309 7.62694 9.64686 7.3124 9.61719 7.00048C9.58618 6.67452 9.44362 6.35376 9.1585 5.71223Z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                     />
+                  </svg>
+                  Зателефонувати
                </a>
             </div>
-         </div>
+         </section>
+         <section className="bg-foreground py-12 text-background md:py-16">
+            <div className="container">
+               <h2 className="mb-6 font-medium text-4xl">Про нас</h2>
+               <div className="grid gap-12 lg:grid-cols-[60%_1fr]">
+                  <Image
+                     src={about}
+                     alt="Ми"
+                     className="rounded-xl"
+                  />
+                  <div className="self-end">
+                     <p className="mb-4 font-medium text-3xl">
+                        Lorem ipsum dolor sit.
+                     </p>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Aspernatur.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section
+            id="where"
+            className="container py-12 md:py-16"
+         >
+            <h2 className="font-semibold text-4xl"> Місце знаходження</h2>
 
-         <div className="before:-translate-x-1/2 after:-z-20 relative z-[-1] flex place-items-center after:absolute before:absolute after:h-[180px] before:h-[300px] before:lg:h-[360px] after:w-full before:w-full sm:after:w-[240px] sm:before:w-[480px] after:translate-x-1/3 before:rounded-full after:bg-gradient-conic before:bg-gradient-radial before:dark:bg-gradient-to-br after:dark:from-sky-900 after:from-sky-200 before:dark:from-transparent before:from-white after:dark:via-[#0141ff] after:via-blue-200 before:dark:to-blue-700 before:to-transparent after:dark:opacity-40 before:dark:opacity-10 after:blur-2xl before:blur-2xl after:content-[''] before:content-['']">
-            <Image
-               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-               src="/next.svg"
-               alt="Next.js Logo"
-               width={180}
-               height={37}
-               priority
+            <iframe
+               style={{
+                  outline: "none",
+               }}
+               title="Google Maps"
+               className="iframe focus:!border-none mt-6 h-[500px] w-full rounded-xl border-2 border-muted"
+               referrerPolicy="no-referrer-when-downgrade"
+               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDDWGJyScDSalVnzq3wgfF-tNzJpBdl_UE&q=ChIJ8XybXAD_LkcRmUPpx2Zec4s&center=50.331332,26.6486596&zoom=18&language=uk"
             />
-         </div>
-
-         <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-            <a
-               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700 hover:bg-gray-100 hover:dark:bg-neutral-800/30"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               <h2 className="mb-3 font-semibold text-2xl">
-                  Docs{" "}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                     -&gt;
-                  </span>
-               </h2>
-               <p className="m-0 max-w-[30ch] text-sm opacity-50">
-                  Find in-depth information about Next.js features and API.
-               </p>
-            </a>
-
-            <a
-               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700 hover:bg-gray-100 hover:dark:bg-neutral-800/30"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               <h2 className="mb-3 font-semibold text-2xl">
-                  Learn{" "}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                     -&gt;
-                  </span>
-               </h2>
-               <p className="m-0 max-w-[30ch] text-sm opacity-50">
-                  Learn about Next.js in an interactive course
-                  with&nbsp;quizzes!
-               </p>
-            </a>
-
-            <a
-               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700 hover:bg-gray-100 hover:dark:bg-neutral-800/30"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               <h2 className="mb-3 font-semibold text-2xl">
-                  Templates{" "}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                     -&gt;
-                  </span>
-               </h2>
-               <p className="m-0 max-w-[30ch] text-sm opacity-50">
-                  Explore starter templates for Next.js.
-               </p>
-            </a>
-
-            <a
-               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700 hover:bg-gray-100 hover:dark:bg-neutral-800/30"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               <h2 className="mb-3 font-semibold text-2xl">
-                  Deploy{" "}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                     -&gt;
-                  </span>
-               </h2>
-               <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-                  Instantly deploy your Next.js site to a shareable URL with
-                  Vercel.
-               </p>
-            </a>
-         </div>
-      </main>
+         </section>
+      </>
    )
 }
