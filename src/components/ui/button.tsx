@@ -7,11 +7,12 @@ const buttonVariants = cva(
    `inline-flex items-center justify-center whitespace-nowrap rounded-xl font-medium
    ring-offset-background focus-visible:outline-none gap-1.5 
    focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 
-   disabled:pointer-events-none disabled:opacity-80 border shadow-sm transition-all`,
+   disabled:pointer-events-none disabled:opacity-80 border shadow-sm transition-all active:scale-95`,
    {
       variants: {
          variant: {
-            default: `bg-primary/90 hover:bg-primary text-background border-primary`,
+            default: `bg-primary hover:bg-primary/90 active:bg-primary text-background border-primary`,
+            secondary: `bg-border/40 hover:bg-border/60 border-border/40`,
             outline: `bg-background hover:border-border border-border/70 backdrop-blur-md hover:bg-border/10 `,
          },
          size: {

@@ -12,9 +12,9 @@ const config: Config = {
          screens: {
             sm: "100%",
             md: "100%",
-            lg: "1018px",
-            xl: "1018px",
-            "2xl": "1018px",
+            lg: "1280px",
+            xl: "1280px",
+            "2xl": "1280px",
          },
       },
       extend: {

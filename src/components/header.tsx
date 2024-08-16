@@ -39,7 +39,9 @@ export function Header() {
                   <li className="ml-auto">
                      <a
                         href="#where"
-                        className={cn(buttonVariants({ size: "sm" }))}
+                        className={cn(
+                           buttonVariants({ size: "sm", variant: "secondary" }),
+                        )}
                      >
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
