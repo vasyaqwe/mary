@@ -23,7 +23,7 @@ export default function RootLayout({
       <html
          lang="en"
          className={cn(
-            "scroll-smooth font-primary antialiased",
+            "scroll-pt-8 scroll-smooth font-primary antialiased",
             manrope.variable,
          )}
       >

@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils"
 import about from "@@/public/about.jpg"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Home() {
    const { innerWidth, isClient } = useIsClient()
+   const [currentTab, _setCurrentTab] = useState<"default" | "3d">("default")
 
    return (
       <>
@@ -58,7 +60,7 @@ export default function Home() {
                                     src={"/nails.jpg"}
                                     width={200}
                                     height={150}
-                                    className="-mt-4 mx-1 inline-block h-[72px] max-w-[140px] rounded-xl object-cover ring-4 ring-muted transition-all duration-100 max-md:hidden hover:ring-2"
+                                    className="-mt-4 mx-1 inline-block h-[66px] max-w-[140px] rounded-xl object-cover ring-4 ring-muted transition-all duration-100 max-md:hidden hover:ring-2"
                                  />
                               </motion.span>
                            )}
@@ -84,10 +86,10 @@ export default function Home() {
                               >
                                  <Image
                                     alt=""
-                                    src={"/netishyn.jpg"}
+                                    src={"/netishyn.png"}
                                     width={200}
                                     height={150}
-                                    className="-mt-4 inline-block h-[72px] max-w-[140px] rounded-xl object-cover ring-4 ring-muted transition-all duration-100 max-md:hidden hover:ring-2"
+                                    className="-mt-4 inline-block h-[66px] max-w-[140px] rounded-xl object-contain ring-4 ring-muted transition-all duration-100 max-md:hidden hover:ring-2"
                                  />
                               </motion.span>
                            )}
@@ -403,7 +405,6 @@ export default function Home() {
             className="container pb-16 md:pt-12 md:pb-24"
          >
             <h2 className="font-semibold text-4xl md:text-5xl">
-               {" "}
                Місце знаходження
             </h2>
             <div className="mt-9 flex justify-between gap-6 rounded-2xl border border-border/70 bg-white p-7 shadow-sm max-md:flex-col md:py-14">
@@ -470,8 +471,41 @@ export default function Home() {
                   d="M473.656 37C459.107 37 441.214 20.8022 440.456 20.1188C432.289 11.9657 424.023 4.71749 411.869 4.71749C398.545 4.71749 382.893 19.902 382.733 20.0529L381.377 21.3206C372.749 29.3842 364.599 37 350.083 37C335.534 37 317.641 20.8022 316.883 20.1188C308.717 11.9657 300.451 4.71749 288.297 4.71749C274.973 4.71749 259.321 19.902 259.161 20.0529L257.882 21.2075C248.029 30.0298 240.252 37 226.516 37C211.962 37 194.069 20.8022 193.317 20.1188C185.145 11.9657 176.879 4.71749 164.731 4.71749C151.407 4.71749 135.754 19.902 135.595 20.0529L134.228 21.33C125.605 29.3889 117.455 36.9953 102.944 36.9953C88.3904 36.9953 70.4972 20.7975 69.7448 20.1141C61.5725 11.961 53.307 4.71278 41.1585 4.71278C29.0649 4.71278 10.8309 15.8973 5.17407 25.0778C4.47108 26.2277 2.80698 26.666 1.46142 26.0628C0.121348 25.4501 -0.389417 24.0268 0.319063 22.8769C6.93154 12.1506 27.0273 0 41.1585 0C55.6246 0 65.2248 8.37931 73.8254 16.9613C78.4387 21.1698 92.8335 32.2825 102.944 32.2825C115.044 32.2825 121.722 26.0428 130.18 18.1442L131.509 16.9047C132.168 16.2591 148.941 0.00471019 164.731 0.00471019C179.197 0.00471019 188.797 8.38402 197.398 16.966C202.011 21.1745 216.406 32.2872 226.516 32.2872C237.907 32.2872 244.278 26.5848 253.916 17.951L255.119 16.8717C255.74 16.2591 272.513 0.00471019 288.302 0.00471019C302.774 0.00471019 312.38 8.38402 320.969 16.966C325.583 21.1698 339.978 32.2825 350.089 32.2825C362.193 32.2825 368.877 26.0381 377.34 18.1301L378.658 16.9C379.317 16.2544 396.09 0 411.875 0C426.346 0 435.953 8.37931 444.542 16.9613C449.156 21.1651 463.55 32.2778 473.661 32.2778C485.261 32.2778 496.069 26.9147 501.869 18.2809C502.627 17.1498 504.302 16.7586 505.625 17.4137C506.938 18.0641 507.388 19.5062 506.636 20.6325C499.842 30.732 487.21 37 473.656 37Z"
                />
             </svg>
-
-            <div className="">
+            {/* <div className="md:-mt-2 has-[input:nth-of-type(1)] relative isolate mx-auto grid h-12 w-full select-none auto-cols-fr grid-flow-col content-center justify-self-center rounded-full border border-border/50 bg-border/60 after:pointer-events-none after:absolute after:top-0.5 after:bottom-0.5 after:left-0.5 after:z-[-1] after:w-[calc(calc(100%-.25rem)/var(--count,3))] sm:max-w-[22rem] after:translate-x-[calc(var(--active,0)*100%)] after:rounded-full after:bg-background after:outline after:outline-2 after:outline-transparent has-[:focus-visible]:after:outline-foreground after:transition-[transform,outline] after:duration-200 has-[:checked:nth-of-type(1)]:[--active:0] has-[:checked:nth-of-type(2)]:[--active:1] has-[:checked:nth-of-type(3)]:[--active:2] has-[input:nth-of-type(2)]:[--count:2] has-[input:nth-of-type(3)]:[--count:3]">
+               <input
+                  disabled={!isClient}
+                  type="radio"
+                  id="default"
+                  checked={currentTab === "default"}
+                  onChange={() => setCurrentTab("default")}
+                  name="view"
+                  value="default"
+                  className="sr-only [&:checked+label]:[--highlight:1;]"
+               />
+               <label
+                  htmlFor="default"
+                  className="after:-translate-y-1/2 relative grid h-12 cursor-pointer place-items-center text-center font-medium text-[hsla(0,0%,0%,calc(0.75+var(--highlight,0)))] transition after:absolute after:inset-0.5 after:top-1/2 after:z-[-1] after:h-[42.2px] after:rounded-full after:bg-border after:opacity-0 hover:after:opacity-100 after:outline-2 after:outline-transparent after:transition-opacity after:duration-200"
+               >
+                  Звичайна мапа
+               </label>
+               <input
+                  disabled={!isClient}
+                  type="radio"
+                  id="3d"
+                  checked={currentTab === "3d"}
+                  onChange={() => setCurrentTab("3d")}
+                  name="view"
+                  value="3d"
+                  className="sr-only [&:checked+label]:[--highlight:1;]"
+               />
+               <label
+                  htmlFor="3d"
+                  className="after:-translate-y-1/2 relative grid h-12 cursor-pointer place-items-center text-center font-medium text-[hsla(0,0%,0%,calc(0.75+var(--highlight,0)))] transition after:absolute after:inset-0.5 after:top-1/2 after:z-[-1] after:h-[42.2px] after:rounded-full after:bg-border after:opacity-0 hover:after:opacity-100 after:outline-2 after:outline-transparent after:transition-opacity after:duration-200"
+               >
+                  3Д мапа
+               </label>
+            </div> */}
+            <div className="-mt-0.5">
                <iframe
                   style={{
                      outline: "none",
@@ -479,7 +513,11 @@ export default function Home() {
                   title="Google Maps"
                   className="iframe focus:!border-none mt-6 h-[600px] max-h-[80svh] w-full rounded-2xl border-4"
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDDWGJyScDSalVnzq3wgfF-tNzJpBdl_UE&q=ChIJ8XybXAD_LkcRmUPpx2Zec4s&center=50.331332,26.6486596&zoom=18&language=uk"
+                  src={
+                     currentTab === "default"
+                        ? "https://www.google.com/maps/embed/v1/place?key=AIzaSyDDWGJyScDSalVnzq3wgfF-tNzJpBdl_UE&q=ChIJ8XybXAD_LkcRmUPpx2Zec4s&center=50.331332,26.6486596&zoom=18&language=uk"
+                        : "https://www.google.com/maps/embed/v1/streetview?key=AIzaSyDDWGJyScDSalVnzq3wgfF-tNzJpBdl_UE&location=50.331332,26.6486596&language=uk"
+                  }
                />
             </div>
          </section>
