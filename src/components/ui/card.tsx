@@ -9,7 +9,6 @@ const cardVariants = cva(
       variants: {
          variant: {
             default: ``,
-            inverted: `bg-background border-border/60 text-foreground`,
          },
       },
       defaultVariants: {

@@ -10,16 +10,7 @@
       "attributePosition": "multiline"
    },
    "files": {
-      "ignore": [
-         "expo-plugins",
-         ".expo",
-         "dist",
-         "out",
-         ".next",
-         ".turbo",
-         ".wrangler",
-         "routeTree.gen.ts"
-      ]
+      "ignore": ["dist", "out", ".next"]
    },
    "javascript": {
       "formatter": {

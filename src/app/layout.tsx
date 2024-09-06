@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Manrope } from "next/font/google"
-import "./globals.css"
+import "../styles/app.css"
 import { Header } from "@/components/header"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
