@@ -1,7 +1,6 @@
+import { cn } from "@/ui/components/utils"
 import { type VariantProps, cva } from "class-variance-authority"
 import * as React from "react"
-
-import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
    `inline-flex items-center justify-center whitespace-nowrap rounded-xl font-medium

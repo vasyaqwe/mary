@@ -1,15 +1,21 @@
 "use client"
 
-import { buttonVariants } from "@/components/ui/button"
-import { useIsClient } from "@/hooks/use-is-client"
-import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/ui/components/button"
+import { cn } from "@/ui/components/utils"
 import about from "@@/public/about.jpg"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Home() {
-   const { innerWidth, isClient } = useIsClient()
+   const [isClient, setIsClient] = useState(false)
+
+   useEffect(() => {
+      setIsClient(true)
+   }, [])
+
+   const innerWidth = !isClient ? 0 : window.innerWidth
+
    const [currentTab, setCurrentTab] = useState<"default" | "3d">("default")
 
    return (
